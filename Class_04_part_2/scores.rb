@@ -31,4 +31,6 @@ p evens
 puts "Odds:"
 p odds
 
+numbers = [2, 4, 6]
 
+numbers.reduce { |sum, number| sum + number }

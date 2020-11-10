@@ -1,4 +1,4 @@
-eekends = [ "monday", "tuesday", "wednesday", "thursday", "friday"]
+weekends = [ "monday", "tuesday", "wednesday", "thursday", "friday"]
 
 # weekends.each do |d|
 # 	puts d.capitalize
