@@ -1,3 +1,4 @@
+require_relative 'my_enumerable'
 class Song
   attr_reader :name, :artist, :duration
 
@@ -53,5 +54,18 @@ playlist.add_song(song4)
 playlist.each { |song| song.play }
 playlist.play_songs
 
-okie_songs = playlist.select { |song| song.name =~ /Okie/ }
-p okie_songs
+imagine_songs = playlist.my_select { |song| song.name =~ /Imagine/ }
+p imagine_songs
+
+songs_label = playlist.my_map { |s| "#{s.name} - #{s.artist}"}
+p songs_label
+
+non_imagine_songs = playlist.my_reject { |song| song.name =~ /Okie/ }
+p non_imagine_songs
+
+p playlist.my_detect { |song| song.artist == "Marvin Gaye" }
+
+p playlist.my_any? { |song| song.artist == "Bob Dylan" }
+
+total_duration = playlist.my_reduce(0) { |sum, song| sum + song.duration }
+p total_duration
