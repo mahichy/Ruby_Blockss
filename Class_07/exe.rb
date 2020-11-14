@@ -20,8 +20,8 @@ def tag(name)
 	print "<#{name}>"
 end
 
-# rag(:h1) { "Breaking News!" }
-# rag(:h2) { "Massive Ruby Discovered" }
+tag(:h1) { "Breaking News!" }
+tag(:h2) { "Massive Ruby Discovered" }
 
 
 tag(:ul) do
