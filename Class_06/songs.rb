@@ -19,8 +19,8 @@ song4 = Song.new("Yesterday", "The Beatles", 10)
 
 
 class Playlist
-	# include Enumerable
-   include MyEnumerable
+	include Enumerable
+   # include MyEnumerable
   def initialize(name)
     @name = name
     @songs = []
